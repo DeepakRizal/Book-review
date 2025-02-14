@@ -1,77 +1,53 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
-import { useSelector } from "react-redux";
-import ReviewForm from "../components/ReviewForm";
 
-const apiUrl = import.meta.env.VITE_API_URL;
+import { useDispatch, useSelector } from "react-redux";
+import ReviewForm from "../components/ReviewForm";
+import { fetchBookById, fetchReviewsByBook } from "../api/api";
 
 const BookDetails = () => {
   const { id } = useParams();
-  const [book, setBook] = useState(null);
-  const [bookLoading, setBookLoading] = useState(true);
-  const [bookError, setBookError] = useState(null);
-  const [reviews, setReviews] = useState([]);
-  const [reviewsLoading, setReviewsLoading] = useState(true);
-  const [reviewsError, setReviewsError] = useState(null);
+  const dispatch = useDispatch();
+  const {
+    selectedBook: book,
+    loading,
+    error,
+  } = useSelector((state) => state.book);
+
+  const {
+    reviews,
+    loading: reviewsLoading,
+    error: reviewsError,
+  } = useSelector((state) => state.review);
 
   const user = useSelector((state) => state.auth?.user || null);
 
   useEffect(() => {
-    const fetchBook = async () => {
-      try {
-        setBookError(null);
-        const response = await axios.get(`${apiUrl}/books/${id}`);
-        setBook(response.data.data.book);
-        setBookLoading(false);
-      } catch (error) {
-        setBookError(error.message);
-        setBookLoading(false);
-      }
-    };
-
-    const fetchReviews = async () => {
-      try {
-        setReviewsError(null);
-        const response = await axios.get(`${apiUrl}/reviews/${id}`);
-        setReviews(response.data.data.reviews);
-        setReviewsLoading(false);
-      } catch (error) {
-        setReviewsError(error.message);
-        setReviewsLoading(false);
-      }
-    };
-
-    fetchBook();
-    fetchReviews();
-  }, [id]);
-
-  // Function to update reviews immediately after submission
-  const handleAddReview = (newReview) => {
-    setReviews((prevReviews) => [newReview, ...prevReviews]);
-  };
+    dispatch(fetchBookById(id));
+    dispatch(fetchReviewsByBook(id));
+  }, [id, dispatch]);
 
   return (
     <div className="container mx-auto p-4">
-      {bookLoading ? (
+      {loading ? (
         <p>Loading book details...</p>
-      ) : bookError ? (
-        <p className="text-red-500">{bookError}</p>
+      ) : error ? (
+        <p className="text-red-500">{error}</p>
       ) : (
         <div className="mb-6 flex flex-col items-center">
           <img
-            src={book.image}
-            alt={book.title}
+            src={book?.image}
+            alt={book?.title}
             className="w-64 h-80 object-cover rounded-lg shadow-md"
           />
-          <h1 className="text-3xl font-bold mt-4 text-center">{book.title}</h1>
-          <p className="text-gray-700 text-lg">by {book.author}</p>
-          <p className="text-yellow-500 text-lg">Rating: {book.rating} ⭐</p>
-          <p className="mt-2 text-gray-600 text-center">{book.description}</p>
+          <h1 className="text-3xl font-bold mt-4 text-center">{book?.title}</h1>
+          <p className="text-gray-700 text-lg">by {book?.author}</p>
+          <p className="text-yellow-500 text-lg">Rating: {book?.rating} ⭐</p>
+          <p className="mt-2 text-gray-600 text-center">{book?.description}</p>
         </div>
       )}
 
-      {user && <ReviewForm bookId={id} onAddReview={handleAddReview} />}
+      {user && <ReviewForm bookId={id} />}
 
       <div className="mt-6">
         <h2 className="text-2xl font-semibold">Reviews</h2>

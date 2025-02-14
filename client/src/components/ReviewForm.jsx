@@ -6,7 +6,7 @@ import { addReview } from "../redux/slices/reviewSlice";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
-const ReviewForm = ({ bookId, onAddReview }) => {
+const ReviewForm = ({ bookId }) => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const dispatch = useDispatch();
@@ -31,7 +31,6 @@ const ReviewForm = ({ bookId, onAddReview }) => {
 
       // Dispatch the new review to Redux store
       dispatch(addReview(response.data.data.review));
-      onAddReview(response.data.data.review);
 
       setRating(0);
       setComment("");

@@ -5,6 +5,11 @@ import {
   fetchReviewsFailure,
   addReview,
 } from "../redux/slices/reviewSlice";
+import {
+  fetchBookFailure,
+  fetchBookStart,
+  fetchBookSuccess,
+} from "../redux/slices/bookSlice";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -47,5 +52,19 @@ export const submitReview = (review, token) => async (dispatch) => {
     dispatch(addReview(response.data.data.review));
   } catch (error) {
     console.error("Error submitting review:", error);
+  }
+};
+
+export const fetchBookById = (bookId) => async (dispatch) => {
+  dispatch(fetchBookStart());
+  try {
+    const response = await axios.get(`${apiUrl}/books/${bookId}`);
+    dispatch(fetchBookSuccess(response.data.data.book));
+  } catch (error) {
+    dispatch(
+      fetchBookFailure(
+        error.response?.data?.message || "Failed to load book details"
+      )
+    );
   }
 };
