@@ -1,0 +1,162 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A novel about the American dream and the roaring twenties.",
+    "genre": "Classic",
+    "rating": 4.4,
+    "image": "https://m.media-amazon.com/images/I/81TLiZrasVL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel about racial injustice in the Deep South.",
+    "genre": "Classic",
+    "rating": 4.8,
+    "image": "https://m.media-amazon.com/images/I/811NqsxadrS._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel about a totalitarian regime.",
+    "genre": "Dystopian",
+    "rating": 4.7,
+    "image": "https://m.media-amazon.com/images/I/612ADI+BVlL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A story about teenage rebellion and alienation.",
+    "genre": "Classic",
+    "rating": 4.0,
+    "image": "https://m.media-amazon.com/images/I/8125BDk3l9L.jpg"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel about manners and marriage in 19th century England.",
+    "genre": "Romance",
+    "rating": 4.6,
+    "image": "https://m.media-amazon.com/images/I/81mTGi9gs-L._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy adventure of a hobbit's journey to reclaim a treasure.",
+    "genre": "Fantasy",
+    "rating": 4.8,
+    "image": "https://m.media-amazon.com/images/I/91ZX8zNpwZL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young wizard discovers his magical heritage.",
+    "genre": "Fantasy",
+    "rating": 4.9,
+    "image": "https://m.media-amazon.com/images/I/81q77Q39nEL.jpg"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic fantasy about the battle against evil forces.",
+    "genre": "Fantasy",
+    "rating": 4.9,
+    "image": "https://m.media-amazon.com/images/I/81j4C6j3dRL.jpg"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "description": "A dystopian novel about a future where books are banned.",
+    "genre": "Dystopian",
+    "rating": 4.5,
+    "image": "https://m.media-amazon.com/images/I/61zc4fPQbIL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "description": "A dystopian vision of a highly controlled future society.",
+    "genre": "Dystopian",
+    "rating": 4.3,
+    "image": "https://m.media-amazon.com/images/I/917t3Joq2WL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel about following your dreams.",
+    "genre": "Fiction",
+    "rating": 4.7,
+    "image": "https://m.media-amazon.com/images/I/61HAE8zahLL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "description": "A novel about a captain's obsession with a giant whale.",
+    "genre": "Adventure",
+    "rating": 4.1,
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/b/w/t/moby-dick-original-imaghjkbnchgcfnj.jpeg?q=90&crop=false"
+  },
+  {
+    "title": "The Chronicles of Narnia",
+    "author": "C.S. Lewis",
+    "description": "A fantasy series about children discovering a magical world.",
+    "genre": "Fantasy",
+    "rating": 4.7,
+    "image": "https://m.media-amazon.com/images/I/81RuC2qCSmL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "description": "A psychological novel about crime and guilt.",
+    "genre": "Classic",
+    "rating": 4.6,
+    "image": "https://rukminim2.flixcart.com/image/720/864/l13whow0/book/7/j/y/the-originals-crime-and-punishment-original-imagcr2qbrxzqwc9.jpeg?q=60&crop=false"
+  },
+  {
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "description": "A novel about a young girl in Nazi Germany who loves books.",
+    "genre": "Historical Fiction",
+    "rating": 4.8,
+    "image": "https://m.media-amazon.com/images/I/91JGwQlnu7L.jpg"
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "description": "A post-apocalyptic novel about survival and love.",
+    "genre": "Post-Apocalyptic",
+    "rating": 4.5,
+    "image": "https://example.com/theroad.jpg"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "A science fiction epic about politics, religion, and survival.",
+    "genre": "Science Fiction",
+    "rating": 4.8,
+    "image": "https://m.media-amazon.com/images/I/71EV4nH7vTL.jpg"
+  },
+  {
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "description": "A gothic horror novel about the legendary vampire.",
+    "genre": "Horror",
+    "rating": 4.4,
+    "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/o/h/z/dracula-original-imagmfcbvggggz93.jpeg?q=90&crop=false"
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "description": "A novel about a scientist who creates life with tragic consequences.",
+    "genre": "Horror",
+    "rating": 4.3,
+    "image": "https://m.media-amazon.com/images/I/81FzMSO3XnL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "description": "A horror novel about a haunted hotel and a man's descent into madness.",
+    "genre": "Horror",
+    "rating": 4.7,
+    "image": "https://m.media-amazon.com/images/I/91U7HNa2NQL._AC_UF1000,1000_QL80_.jpg"
+  }
+]
